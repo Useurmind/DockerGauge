@@ -8,3 +8,10 @@ Gauge can be run e.g. like this:
 
 To make this work you have to copy your project into a derived image, install any npm packages
 required and set the working folder to your project folder.
+
+It preinstalls the following plugins:
+
+- js
+- screenshot
+- html-report
+- xml-report

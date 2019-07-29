@@ -19,10 +19,12 @@ RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 RUN apt-get update -y && apt-get install -y nodejs
 
 RUN npm config set unsafe-perm true
-RUN npm install -g npm@latest @getgauge/cli 
+RUN npm install -g npm@latest @getgauge/cli
 ENV PATH=$HOME/.gauge:$PATH
 RUN gauge install js 
 RUN gauge install html-report
+RUN gauge install xml-report
+RUN gauge install screenshot
 
 ENTRYPOINT ["gauge"]
 CMD ["-h"]
